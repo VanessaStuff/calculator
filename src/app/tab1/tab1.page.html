@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      calculator
+      Calculator
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,40 +13,73 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card>
-  <ion-card-header>
-    Card Header
-  </ion-card-header>
 
-
-  <ion-card-content>
-    The result of the calculations will be shown here.
-  </ion-card-content>
-  </ion-card>
+  <ion-item >
+    <ion-label class="value">
+      {{value}}
+    </ion-label>
+  </ion-item>
 
   <ion-grid>
     <ion-row>
-      <ion-col size="1"> 
-        <button ion-button color="dark" block> 1 </button>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onClick('1')">   1   </ion-button>
       </ion-col>
-      <ion-col size="1"> 
-        <button ion-button color="dark" large> 2 </button>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onClick('2')">   2   </ion-button>
       </ion-col>
-      <ion-col size="1"> 
-        <button ion-button color="dark" large> 3 </button>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onClick('3')">   3   </ion-button>
+      </ion-col>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onOperation('x')">   x   </ion-button>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col> 4</ion-col>
-      <ion-col> 5</ion-col>
-      <ion-col> 6</ion-col>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onClick('4')">   4   </ion-button>
+      </ion-col>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onClick('5')">   5   </ion-button>
+      </ion-col>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onClick('6')">   6   </ion-button>
+      </ion-col>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onOperation('-')">   -   </ion-button>
+      </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col> 7</ion-col>
-      <ion-col> 8</ion-col>
-      <ion-col> 9</ion-col>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onClick('7')">   7   </ion-button>
+      </ion-col>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onClick('8')">   8   </ion-button>
+      </ion-col>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onClick('9')">   9   </ion-button>
+      </ion-col>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onOperation('+')">   +   </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onClick('0')">   0   </ion-button>
+      </ion-col>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onOperation('C')">   C   </ion-button>
+      </ion-col>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onOperation('/')">   /   </ion-button>
+      </ion-col>
+      <ion-col> 
+        <ion-button color="dark" expand="block" class="calc-button" (click)="onOperation('=')">   =   </ion-button>
+      </ion-col>
     </ion-row>
   </ion-grid>
+
+
 
   <!--<app-explore-container name="A calculator will be here soon"></app-explore-container> -->
 </ion-content>
